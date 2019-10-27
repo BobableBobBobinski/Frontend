@@ -1,35 +1,9 @@
 h1 {
     font-style: normal;
-    color: ghostwhite;
+    color: darkseagreen;
     text-shadow: black 1px 1px 0, black -1px -1px 0, black -1px 1px 0, black 1px -1px 0;
     margin: 10px 20px;
 
 
 }
 
-
-button {
-    margin-left: 100px;
-    margin-top: 20px;
-    width: 150px;
-    height: 25px;
-}
-
-.button {
-
-    width: 150px;
-    height: 20px;
-
-    margin-top: 15px;
-    margin-left: 100px;
-    display: flex;
-    justify-content: center;
-
-
-
-    display: inline-block;
-
-    text-decoration: none;
-    background-color: #F8F8FF;
-    color: black;
-}

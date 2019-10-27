@@ -1,0 +1,13 @@
+#first {
+    margin-left: 40px;
+}
+.oneimage {
+   margin: 2px 5px;
+    height: 240px;
+    width: 140px;
+}
+.onetext {
+    margin: 3px 5px;
+    height: 32px;
+    width: 140px;
+}
