@@ -1,0 +1,81 @@
+h1 {
+    font-style: normal;
+    color: ghostwhite;
+    text-shadow: black 1px 1px 0, black -1px -1px 0, black -1px 1px 0, black 1px -1px 0;
+    margin: 10px 20px;
+
+
+}
+
+#main-logo {
+    margin: 20px 20px;
+
+}
+
+h2 {
+    font-style: normal;
+    color: ghostwhite;
+}
+
+span {
+    font-style: normal;
+    margin: 20px 20px;
+    margin-bottom: 20px;
+    padding: 25px 30px;
+
+}
+
+
+#city-span {
+    margin: 25px 42px;
+    margin-bottom: inherit;
+    padding: 25px 30px;
+    height: auto;
+}
+
+#last-name {
+    margin: 25px 21px;
+}
+
+#registr {
+    margin: 30px 120px;
+}
+
+#password {
+    margin: 24px;
+}
+
+#rpt {
+    margin: 33px;
+}
+
+#gal {
+
+    margin-top: 40px;
+}
+
+button {
+    margin-left: 100px;
+    margin-top: 20px;
+    width: 150px;
+    height: 25px;
+}
+
+.button {
+
+    width: 150px;
+    height: 20px;
+
+    margin-top: 15px;
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+
+
+
+    display: inline-block;
+
+    text-decoration: none;
+    background-color: #F8F8FF;
+    color: black;
+}
