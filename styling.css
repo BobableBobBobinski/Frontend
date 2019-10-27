@@ -1,6 +1,12 @@
-#first {
+#firsti {
     margin-left: 40px;
 }
+#lasti {
+    margin-right: 40px;
+}
+#firstb {
+    margin-left: 40px;
+} 
 .oneimage {
    margin: 2px 5px;
     height: 240px;
