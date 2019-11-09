@@ -1,0 +1,17 @@
+.square {
+    width: 200px;
+    height: 200px;
+    background-color: aquamarine;
+    border-radius: 20px;
+    border: 2px solid black;
+}
+
+.row {
+    margin-top: 10px;
+}
+body {
+    background-color: dimgray;
+}
+fuction turn(element){
+    console.log($(this).text());
+}
