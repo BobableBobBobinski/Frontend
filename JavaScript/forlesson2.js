@@ -1,9 +1,3 @@
-function alerting() {
-    alert("!!!");
-    var card = document.getElementById("card-to-delete");
-    card.parentElement.removeChild();
-}
-
 function removeByJquery() {
     var element = $("#card-to-delete");
     element.remove();
@@ -21,7 +15,7 @@ function turn(number) {
     $("#s" + number).animate({
         backgroundColor: current,
         borderColor: "white"
-    }, 157);
+    }, 300);
     colors[number - 1] = current;
     console.log(colors);
     if (current === "blue") {
@@ -32,6 +26,12 @@ function turn(number) {
     $("#s" + number).prop("disabled", true);
     var result = check();
     if (result != "none") {
+        for (let i = 0; i < 10; i++) {
+            $("#s" + i).prop("disabled", true);
+        }
+        $("#result").animate({
+            backgroundColor: result,
+        }, 200);
         $("#result").text("Winner is ");
     }
     console.log(result);
@@ -40,24 +40,20 @@ function turn(number) {
 function check() {
     for (let i = 0; i < 7; i += 3) {
         if (colors[0 + i] == colors[1 + i] && colors[1 + i] == colors[2 + i] && colors[2 + i] != "none") {
-            alert(colors[0 + i]);
             return colors[0 + i];
         }
     }
     for (let i = 0; i < 3; i += 1) {
         if (colors[0 + i] == colors[3 + i] && colors[3 + i] == colors[6 + i] && colors[6 + i] != "none") {
-            alert(colors[0 + i]);
             return colors[0 + i];
         }
     }
     if (colors[0] == colors[4] && colors[4] == colors[8] && colors[0] != "none") {
-        alert(colors[0]);
         return colors[0];
 
 
     }
     if (colors[2] == colors[4] && colors[4] == colors[6] && colors[6] != "none") {
-        alert(colors[2]);
         return colors[2];
     }
     let wasNone = false;
@@ -70,4 +66,18 @@ function check() {
         return "draw";
     }
     return "none";
+}
+
+function restart() {
+    for (let i = 1; i < 10; i++) {
+        $("#s" + i).animate({
+            backgroundColor: "white",
+            borderColor: "black",
+
+        }, 100)
+        $("#s" + i).prop("disabled", false);
+    }
+    for (let i = 0; i < 9; i++) {
+        colors[i] = "none";
+    }
 }
