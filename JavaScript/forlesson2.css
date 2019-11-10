@@ -12,6 +12,3 @@
 body {
     background-color: dimgray;
 }
-fuction turn(element){
-    console.log($(this).text());
-}
