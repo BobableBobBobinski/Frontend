@@ -68,16 +68,16 @@ function check() {
     return "none";
 }
 
-function restart() {
-    for (let i = 1; i < 10; i++) {
-        $("#s" + i).animate({
-            backgroundColor: "white",
-            borderColor: "black",
+//function restart() {
+// for (let i = 1; i < 10; i++) {
+//     $("#s" + i).animate({
+//          backgroundColor: "white",
+//        borderColor: "black",
 
-        }, 100)
-        $("#s" + i).prop("disabled", false);
-    }
-    for (let i = 0; i < 9; i++) {
-        colors[i] = "none";
-    }
-}
+//    }, 100)
+//      $("#s" + i).prop("disabled", false);
+//  }
+//  for (let i = 0; i < 9; i++) {
+//     colors[i] = "none";
+//  }
+//}
