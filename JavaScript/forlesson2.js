@@ -7,8 +7,10 @@ function add() {
     var but2 = $("#button-to-add");
     but2.after("<h2>Hello, ma friend</h2>");
 }
-var current = "blue";
-var colors = ["none", "none", "none", "none", "none", "none", "none", "none", "none"];
+let current = "blue";
+let colors = ["none", "none", "none", "none", "none", "none", "none", "none", "none"];
+let score1 = 0;
+let score2 = 0;
 
 function turn(number) {
     // $("#s" + number).css("background-color", current);
@@ -24,7 +26,7 @@ function turn(number) {
         current = "blue";
     }
     $("#s" + number).prop("disabled", true);
-    var result = check();
+    let result = check();
     if (result != "none") {
         for (let i = 0; i < 10; i++) {
             $("#s" + i).prop("disabled", true);
@@ -33,6 +35,15 @@ function turn(number) {
             backgroundColor: result,
         }, 200);
         $("#result").text("Winner is ");
+        if (result === "blue") {
+            score1++;
+            $("#score1").text("Blue " + score1);
+        } else if (result === "red") {
+            score2++;
+            $("#score2").text("Red " + score2);
+        } else {
+            $("#result").text("Draw");
+        }
     }
     console.log(result);
 }
@@ -68,16 +79,15 @@ function check() {
     return "none";
 }
 
-//function restart() {
-// for (let i = 1; i < 10; i++) {
-//     $("#s" + i).animate({
-//          backgroundColor: "white",
-//        borderColor: "black",
-
-//    }, 100)
-//      $("#s" + i).prop("disabled", false);
-//  }
-//  for (let i = 0; i < 9; i++) {
-//     colors[i] = "none";
-//  }
-//}
+function Restart() {
+    for (let i = 1; i < 10; i++) {
+        $("#s" + i).css("background-color", "aquamarine");
+        $("#s" + i).prop("disabled", false);
+    }
+    for (let i = 0; i < 9; i++) {
+        colors[i] = "none";
+        $("#result").css("background", "none");
+        $("#result").text("");
+        current = "aquamarine"
+    }
+}
